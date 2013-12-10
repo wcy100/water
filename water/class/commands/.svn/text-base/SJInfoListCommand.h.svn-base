@@ -1,0 +1,26 @@
+//
+//  SJInfoListCommand.h
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "CDCommandBase.h"
+
+@interface SJInfoListCommand : CDCommandBase
+{
+    NSString *_shop_type;
+    NSString *_order_type;
+    NSString *_order_model;
+    NSString *_retrieval;
+    NSInteger _toPage;
+    NSInteger _pageCount;
+}
+@property (nonatomic, retain) NSString *shop_type;//商家分类id
+@property (nonatomic, retain) NSString *order_type;//排序方式0好评、1推荐指数
+@property (nonatomic, retain) NSString *order_model;//0正序1倒序
+@property (nonatomic, retain) NSString *retrieval;//搜索内容
+@property (nonatomic, assign) NSInteger toPage;
+@property (nonatomic, assign) NSInteger pageCount;
+@end

@@ -1,0 +1,42 @@
+//
+//  TypeInfosReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "TypeInfosReturnParser.h"
+#import "TypeInfosReturn.h"
+@implementation TypeInfosReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        for (int i =0; i<[self.sRetData count]; i++) {
+            NSDictionary *tempDic = [self.sRetData objectAtIndex:i];
+            TypeInfosReturn *Item = [[TypeInfosReturn alloc] init];
+            Item.topType.type_id = [tempDic objectForKey:@"type_id"];
+            Item.topType.type_img = [tempDic objectForKey:@"type_img"];
+            Item.topType.type_name = [tempDic objectForKey:@"type_name"];
+            Item.topType.type_level = @"0";
+            
+            NSArray *arr = [tempDic objectForKey:@"list"];
+            for (NSDictionary *dic in arr) {
+                // NSDictionary *dic = [obj toJSONObject];
+                type *thetype = [[type alloc]init];
+                thetype.type_id = [dic objectForKey:@"type_id"];
+                thetype.type_name = [dic objectForKey:@"type_name"];
+                thetype.type_img = [dic objectForKey:@"type_img"];
+                thetype.type_level = [dic objectForKey:@"type_level"];
+                [Item.next_types addObject:thetype];
+                [thetype release];
+            }
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+        
+        }
+    return YES;
+}@end

@@ -1,0 +1,30 @@
+//
+//  TypeInfosCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "TypeInfosCommand.h"
+
+@implementation TypeInfosCommand
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"TypeInfos";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    
+    [dic setObject:@"5" forKey:@"type_id"];
+  
+    return [dic JSONString];
+    
+}
+@end

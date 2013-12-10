@@ -1,0 +1,36 @@
+//
+//  SJDetailReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SJDetailReturn.h"
+
+@implementation SJDetailReturn
+@synthesize shop_photo,shop_name,shop_type,shop_content,seller_info_id,link_address,sp_phone,positiveCount,shop_imgs,shop_value;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        shop_imgs = [[NSMutableArray alloc]init];
+    }
+    return self;
+}
+- (void)dealloc
+{
+    [shop_value release];
+    [shop_photo release];
+    [shop_name release];
+    [shop_type release];
+    [shop_imgs release];
+    [shop_content release];
+    [seller_info_id release];
+    [link_address release];
+    [sp_phone release];
+    [positiveCount release];
+    
+    [super dealloc];
+}
+@end

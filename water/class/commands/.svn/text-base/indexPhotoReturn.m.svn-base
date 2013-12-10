@@ -1,0 +1,30 @@
+//
+//  indexPhotoReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "indexPhotoReturn.h"
+
+@implementation indexPhotoReturn
+@synthesize shop_photo = _shop_photo;
+@synthesize seller_info_id = _seller_info_id;
+@synthesize shop_name = _shop_name;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+- (void)dealloc
+{
+    [_shop_name release];
+    [_shop_photo release];
+    [_seller_info_id release];
+    [super dealloc];
+}
+@end

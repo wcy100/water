@@ -1,0 +1,20 @@
+//
+//  SJInfoListReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface SJInfoListReturn : NSObject
+@property (nonatomic, retain) NSString *shop_photo;
+@property (nonatomic, retain) NSString *seller_info_id;
+@property (nonatomic, retain) NSString *shop_name;
+@property (nonatomic, retain) NSString *shop_type;
+@property (nonatomic, retain) NSString *positiveCount;
+@property (nonatomic, assign) NSInteger groom;
+@property (nonatomic, assign) NSInteger countRecord;
+@property (nonatomic, assign) NSInteger countPage;
+@end

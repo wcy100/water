@@ -1,0 +1,36 @@
+//
+//  SignCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-29.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SignCommand.h"
+
+@implementation SignCommand
+@synthesize userId;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"Sign";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    
+    [dic setObject:userId forKey:@"user_id"];
+    
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [userId release];
+    [super dealloc];
+}
+@end

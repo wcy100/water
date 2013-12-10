@@ -1,0 +1,13 @@
+//
+//  TypeInfosCommand.h
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "CDCommandBase.h"
+
+@interface TypeInfosCommand : CDCommandBase
+
+@end

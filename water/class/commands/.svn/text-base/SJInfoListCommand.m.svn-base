@@ -1,0 +1,47 @@
+//
+//  SJInfoListCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SJInfoListCommand.h"
+
+@implementation SJInfoListCommand
+@synthesize shop_type = _shop_type;
+@synthesize order_type = _order_type;
+@synthesize order_model = _order_model;
+@synthesize retrieval = _retrieval;
+@synthesize toPage = _toPage;
+@synthesize pageCount = _pageCount;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"SJInfoList"; 
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    [dic setObject:_shop_type forKey:@"shop_type"];
+    [dic setObject:_order_type forKey:@"order_type"];
+    [dic setObject:_order_model forKey:@"order_model"];
+    [dic setObject:_retrieval forKey:@"retrieval"];
+    [dic setObject:[NSNumber numberWithInteger:_toPage] forKey:@"toPage"];
+    [dic setObject:[NSNumber numberWithInteger:_pageCount] forKey:@"pageCount"];
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [_shop_type release];
+    [_order_model release];
+    [_order_type release];
+    [_retrieval release];
+    [super dealloc];
+}
+@end

@@ -1,0 +1,13 @@
+//
+//  PDFLListReturnParser.h
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "CDReturnParserBase.h"
+
+@interface PDFLListReturnParser : CDReturnParserBase
+
+@end

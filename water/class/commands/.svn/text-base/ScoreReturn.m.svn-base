@@ -1,0 +1,18 @@
+//
+//  ScoreReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-29.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "ScoreReturn.h"
+
+@implementation ScoreReturn
+@synthesize jf_count;
+- (void)dealloc
+{
+    [jf_count release];
+    [super dealloc];
+}
+@end

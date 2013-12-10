@@ -1,0 +1,35 @@
+//
+//  PDFLListCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "PDFLListCommand.h"
+
+@implementation PDFLListCommand
+@synthesize pd_id ;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"PDFLList";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    [dic setObject:pd_id forKey:@"pd_id"];
+    
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [pd_id release];
+    [super dealloc];
+}
+@end

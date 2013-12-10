@@ -1,0 +1,19 @@
+//
+//  SecondHandMESReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface SecondHandMESReturn : NSObject
+@property (nonatomic, retain) NSString *user_id;
+@property (nonatomic, retain) NSString *head_photo;
+@property (nonatomic, retain) NSString *content;
+@property (nonatomic, retain) NSString *d_date;
+@property (nonatomic, assign) NSInteger countRecord;
+@property (nonatomic, assign) NSInteger countPage;
+@property (nonatomic, retain) NSString *screen_name;
+@end

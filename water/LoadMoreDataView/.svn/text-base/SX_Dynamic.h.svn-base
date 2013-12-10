@@ -1,0 +1,15 @@
+//
+//  NearController.h
+//  Pringles
+//
+//  Created by  on 12-3-27.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+
+#import "TableView.h"
+@interface SX_Dynamic : UIViewController<UITableViewDelegate,UITableViewDataSource,UITableViewRefresh>{
+    TableView *tvDynamic;
+}
+-(void) breakPage:(int)row;
+@end

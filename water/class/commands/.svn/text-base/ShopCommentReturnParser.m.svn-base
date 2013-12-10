@@ -1,0 +1,38 @@
+//
+//  ShopCommentReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "ShopCommentReturnParser.h"
+#import "ShopCommentReturn.h"
+@implementation ShopCommentReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        for (int i =0; i<[self.sRetData count]; i++) {
+            NSDictionary *tempDic = [self.sRetData objectAtIndex:i];
+            ShopCommentReturn *Item = [[ShopCommentReturn alloc] init];
+            Item.screen_name = [tempDic objectForKey:@"screen_name"];
+            Item.head_photo = [tempDic objectForKey:@"head_photo"];
+            Item.content = [tempDic
+                            objectForKey:@"content"];
+            Item.pj_level = [tempDic objectForKey:@"pj_level"];
+            Item.op_date = [tempDic objectForKey:@"op_date"];
+            Item.countPage = [[tempDic objectForKey:@"countPage"]integerValue];
+            Item.countRecord = [[tempDic objectForKey:@"countRecord"]integerValue];
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+        
+        
+        }
+    
+    return YES;
+    
+}
+@end

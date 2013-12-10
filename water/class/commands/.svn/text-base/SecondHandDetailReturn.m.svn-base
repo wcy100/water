@@ -1,0 +1,26 @@
+//
+//  SecondHandDetailReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-26.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandDetailReturn.h"
+
+@implementation SecondHandDetailReturn
+@synthesize c_title,n_price,c_content,groom,fbr_name,head_photo,linkman,linkphone,d_date;
+- (void)dealloc
+{
+    [c_title release];
+    [n_price release];
+    [c_content release];
+    [groom release];
+    [fbr_name release];
+    [head_photo release];
+    [linkman release];
+    [linkphone release];
+    [d_date release];
+    [super dealloc];
+}
+@end

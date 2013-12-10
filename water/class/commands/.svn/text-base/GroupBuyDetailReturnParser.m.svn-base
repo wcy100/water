@@ -1,0 +1,43 @@
+//
+//  GroupBuyDetailReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "GroupBuyDetailReturnParser.h"
+#import "GroupBuyDetailReturn.h"
+@implementation GroupBuyDetailReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        NSDictionary *tempDic = self.sRetData;
+ 
+        GroupBuyDetailReturn *Item = [[GroupBuyDetailReturn alloc] init];
+            
+            Item.product_info = [tempDic objectForKey:@"product_info"];
+            Item.ware_title = [tempDic objectForKey:@"ware_title"];
+            Item.real_price = [tempDic objectForKey:@"real_price"];
+            Item.buy_count = [NSString stringWithFormat:@"%d",[[tempDic objectForKey:@"buy_count"]integerValue]];
+            Item.sell_price = [tempDic objectForKey:@"sell_price"];
+            Item.ware_big_photo = [tempDic objectForKey:@"ware_big_photo"];
+            Item.ware_content = [tempDic objectForKey:@"ware_content"];
+            Item.is_seven_return = [tempDic objectForKey:@"is_seven_return"];
+            Item.all_time_return = [tempDic objectForKey:@"all_time_return"];
+            Item.start_date = [tempDic objectForKey:@"start_date"];
+            Item.close_date = [tempDic objectForKey:@"close_date"];
+            Item.is_sell_off = [tempDic objectForKey:@"is_sell_off"];
+            Item.is_time_out = [tempDic objectForKey:@"is_time_out"];
+            Item.best = [[tempDic objectForKey:@"best"]integerValue];
+            Item.middle = [[tempDic objectForKey:@"middle"]integerValue];
+            Item.bad = [[tempDic objectForKey:@"bad"]integerValue];
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+    return YES;
+    
+}
+@end

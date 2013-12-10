@@ -1,0 +1,35 @@
+//
+//  SJDetailCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SJDetailCommand.h"
+
+@implementation SJDetailCommand
+@synthesize seller_info_id;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"SJDetail";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    [dic setObject:seller_info_id forKey:@"seller_info_id"];
+ 
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [seller_info_id release];
+    [super dealloc];
+}
+@end

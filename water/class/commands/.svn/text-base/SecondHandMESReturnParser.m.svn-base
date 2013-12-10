@@ -1,0 +1,36 @@
+//
+//  SecondHandMESReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandMESReturnParser.h"
+#import "SecondHandMESReturn.h"
+@implementation SecondHandMESReturnParser
+
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        for (int i =0; i<[self.sRetData count]; i++) {
+            NSDictionary *tempDic = [self.sRetData objectAtIndex:i];
+            SecondHandMESReturn *Item = [[SecondHandMESReturn alloc] init];
+            Item.user_id = [tempDic objectForKey:@"user_id"];
+            Item.head_photo = [tempDic objectForKey:@"head_photo"];
+            Item.content = [tempDic objectForKey:@"content"];
+            Item.d_date = [tempDic objectForKey:@"d_date"];
+            Item.screen_name = [tempDic objectForKey:@"screen_name"];
+            Item.countPage = [[tempDic objectForKey:@"pageCount"]integerValue];
+            Item.countRecord = [[tempDic objectForKey:@"rowCount"]integerValue];
+            
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+
+        }
+    return YES;
+}
+@end

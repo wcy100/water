@@ -1,0 +1,36 @@
+//
+//  PDFLListReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "PDFLListReturnParser.h"
+#import "PDFLListReturn.h"
+@implementation PDFLListReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        for (int i =0; i<[self.sRetData count]; i++) {
+            NSDictionary *tempDic = [self.sRetData objectAtIndex:i];
+            PDFLListReturn *Item = [[PDFLListReturn alloc] init];
+            Item.type_img = [tempDic objectForKey:@"type_img"];
+            Item.type_name = [tempDic objectForKey:@"type_name"];
+            Item.type_id = [tempDic
+                              objectForKey:@"type_id"];
+            Item.type_level = [tempDic objectForKey:@"type_level"];
+    
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+        
+        
+        }
+    
+    return YES;
+    
+}
+@end

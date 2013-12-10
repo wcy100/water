@@ -1,0 +1,40 @@
+//
+//  AddShopCommentCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "AddShopCommentCommand.h"
+
+@implementation AddShopCommentCommand
+@synthesize content,user_id,seller_info_id,pj_level;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"AddShopComment";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    [dic setObject:seller_info_id forKey:@"seller_info_id"];
+    [dic setObject:user_id forKey:@"user_id"];
+    [dic setObject:content forKey:@"content"];
+    [dic setObject:pj_level forKey:@"pj_level"];
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [seller_info_id release];
+    [pj_level release];
+    [user_id release];
+    [content release];
+    [super dealloc];
+}
+@end

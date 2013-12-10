@@ -1,0 +1,15 @@
+//
+//  AddSecondHandMESCommand.h
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "CDCommandBase.h"
+
+@interface AddSecondHandMESCommand : CDCommandBase
+@property (nonatomic, retain) NSString *user_id;
+@property (nonatomic, retain) NSString *content;
+@property (nonatomic, retain) NSString *secondhand_id;
+@end

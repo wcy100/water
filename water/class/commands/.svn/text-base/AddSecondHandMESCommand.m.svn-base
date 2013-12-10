@@ -1,0 +1,40 @@
+//
+//  AddSecondHandMESCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "AddSecondHandMESCommand.h"
+
+@implementation AddSecondHandMESCommand
+@synthesize user_id,content,secondhand_id;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService  = @"AddSecendHandMES";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    [dic setObject:secondhand_id forKey:@"secondhand_id"];
+    [dic setObject:user_id forKey:@"user_id"];
+    
+    [dic setObject:content forKey:@"content"];
+     
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [user_id release];
+    [content release];
+    [secondhand_id release];
+    [super dealloc];
+}
+@end

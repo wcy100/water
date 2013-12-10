@@ -1,0 +1,26 @@
+//
+//  SecondHandInfoReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-25.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandInfoReturn.h"
+
+@implementation SecondHandInfoReturn
+@synthesize theScondHand,countPage,countRecord;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        theScondHand = [[secondHand alloc]init];
+    }
+    return self;
+}
+- (void)dealloc
+{
+    [theScondHand release];
+    [super dealloc];
+}
+@end

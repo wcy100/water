@@ -1,0 +1,15 @@
+//
+//  ShopCommentCommand.h
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "CDCommandBase.h"
+
+@interface ShopCommentCommand : CDCommandBase
+@property (nonatomic, retain) NSString *seller_info_id;
+@property (nonatomic, assign) NSInteger toPage;
+@property (nonatomic, assign) NSInteger pageCount;
+@end

@@ -1,0 +1,22 @@
+//
+//  SJDetailReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface SJDetailReturn : NSObject
+@property (nonatomic, retain) NSString *shop_photo;
+@property (nonatomic, retain) NSString *seller_info_id;
+@property (nonatomic, retain) NSString *link_address;
+@property (nonatomic, retain) NSString *sp_phone;
+@property (nonatomic, retain) NSString *positiveCount;
+@property (nonatomic, retain) NSString *shop_value;
+@property (nonatomic, retain) NSString *shop_name;
+@property (nonatomic, retain) NSString *shop_type;
+@property (nonatomic, retain) NSString *shop_content;
+@property (nonatomic, retain) NSMutableArray *shop_imgs;
+@end

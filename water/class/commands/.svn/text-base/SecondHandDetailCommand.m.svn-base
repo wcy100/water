@@ -1,0 +1,36 @@
+//
+//  SecondHandDetailCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-26.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandDetailCommand.h"
+
+@implementation SecondHandDetailCommand
+@synthesize second_hand_id;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"SecendHandDetail";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    
+    [dic setObject:second_hand_id forKey:@"second_hand_id"];
+    
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [second_hand_id release];
+    [super dealloc];
+}
+@end

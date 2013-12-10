@@ -1,0 +1,14 @@
+//
+//  TypeInfosReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "type.h"
+@interface TypeInfosReturn : NSObject
+@property (nonatomic, retain) type *topType;
+@property (nonatomic, retain) NSMutableArray *next_types;
+@end

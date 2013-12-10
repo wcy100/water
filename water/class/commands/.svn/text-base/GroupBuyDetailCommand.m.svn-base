@@ -1,0 +1,31 @@
+//
+//  GroupBuyDetailCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "GroupBuyDetailCommand.h"
+
+@implementation GroupBuyDetailCommand
+@synthesize ware_info_id ;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"GroupBuyDetail";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+
+    [dic setObject:[NSNumber numberWithInteger:ware_info_id] forKey:@"ware_info_id"];
+ 
+    return [dic JSONString];
+    
+}
+@end

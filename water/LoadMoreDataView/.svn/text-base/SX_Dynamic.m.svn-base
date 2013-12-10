@@ -1,0 +1,209 @@
+//
+//  NearController.m
+//  Pringles
+//
+//  Created by  on 12-3-27.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import "SX_Dynamic.h"
+
+
+
+
+@implementation SX_Dynamic
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+        super.title = @"Demo";
+        
+    }
+    return self;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    // Releases the view if it doesn't have a superview.
+    [super didReceiveMemoryWarning];
+    
+    // Release any cached data, images, etc that aren't in use.
+}
+
+#pragma mark - View lifecycle
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/**
+ 加载系统相关的信息放在这里
+ */
+- (void)viewDidLoad
+{
+   
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+	{
+		[Global GetInstance].ScreenWidth=768;
+		[Global GetInstance].ScreenHeight = 1024;
+		
+	}
+	else
+	{
+		//CGSize screensize  = [[UIScreen mainScreen] currentMode].size;
+		// The device is an iPhone or iPod touch.
+		//[Global GetInstance].ScreenWidth = screensize.width;
+		//[Global GetInstance].ScreenHeight = screensize.height - self.navigationController.navigationBar.frame.size.height;
+		[Global GetInstance].ScreenWidth = 320;
+		[Global GetInstance].ScreenHeight = 480 - self.navigationController.navigationBar.frame.size.height - 20;
+	}
+    
+    [super viewDidLoad];
+}
+
+/**
+ 加载本页们有关的控件放在　这个方法　里面　　　以后其他的也是类似
+ */
+-(void) initview{
+    tvDynamic = [[TableView alloc]initWithFrame:CGRectMake(0, 0, [[Global GetInstance] ScreenWidth], [[Global GetInstance] ScreenHeight])];
+    tvDynamic.delegate = self;
+	tvDynamic.dataSource = self;
+    tvDynamic.refreshDelegate = self;
+    tvDynamic.backgroundColor = [UIColor clearColor];
+    tvDynamic.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [tvDynamic addRefreshView];//添加刷新动作以及加载数据
+	[tvDynamic addMoreView];
+
+    [self.view addSubview:tvDynamic];
+    
+}
+
+-(void) responseReturnSuccess:(NSString *)json{
+      NSArray *arr = [[json JSONValue] valueForKey:@"data"];
+
+    
+    //NSArray *arr = [json.data JSONValue];
+	if ([arr count]==0) {
+        [Global messagetoast:@"暂无动态" target:self];
+	}
+	for (int i=0; i<[arr count]; i++) {
+		//DynamicInfo *dynamicInfo = [[DynamicInfo alloc] initWithJSONStr:[[arr objectAtIndex:i] JSONRepresentation]];
+
+//        DynamicInfo *dynamicInfo = [[DynamicInfo alloc] init];
+//        dynamicInfo.mcontent=[[arr objectAtIndex:i] valueForKey:@"productnumber"];
+//        dynamicInfo.mpics = @"http://a5.mzstatic.com/us/r1000/082/Purple/v4/85/cc/6e/85cc6ee9-2dbd-78ed-b309-21caa8d38665/j6COi3EosjPphjGJF3yYJM-temp-upload.dguocwbg.100x100-75.png";
+//		[tvDynamic.tableArray addObject:dynamicInfo];
+//		[dynamicInfo release];
+
+
+	}
+	[tvDynamic reload:[arr count]];
+}
+
+/**
+ * 调用方法：post
+ * 	调用参数：微博类型：t  ；翻页参数：p；apikey:ak；
+ * 	应该有3个值，一个表示品牌圈，一个表示个人用户，一个表示全部
+ * 	1、普通用户
+ *  2、子账号
+ * ***/
+-(void) reloadRefreshDataSource:(int) pageIndex{
+
+}
+
+-(TableView*) getTableView{
+	return tvDynamic;
+}
+
+
+/**
+ 事件方法不实现会crash
+ */
+-(void) StartSina:(id)sender{
+    
+//    SX_MyDynamic *myDynamic = [[SX_MyDynamic alloc]init];
+//    [self.navigationController pushViewController:myDynamic animated:YES];
+//    [myDynamic release];
+}
+
+
+
+// Customize the number of rows in the table view.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return [tvDynamic tableView:tableView numberOfRowsInSection:section];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tvDynamic tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	static NSString *CellIdentifier = @"ReviewsListACell";
+//	DynamicInfo *dynamicInfo = [tvDynamic.tableArray objectAtIndex:indexPath.row];
+//    
+//	DynamicCell *cell = (DynamicCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//	if (cell == nil) {
+//		cell = [[[DynamicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+//		[cell setTarget:self];
+//	}
+//	[cell setRow:indexPath.row];
+//	[cell setBaseEntity:dynamicInfo];
+//    
+//	return cell;
+}
+
+// Override to support row selection in the table view.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	//The user chose another country
+	//DynamicInfo *reviewInfo = [tvDynamic.tableArray objectAtIndex:indexPath.row];
+	
+    
+//    DynamicInfo *reviewInfo = [tvDynamic.tableArray objectAtIndex:indexPath.row];
+//    
+//    SX_PushController *tx = [[SX_PushController alloc] init];
+//    [tx setValue:reviewInfo];
+//    [self.navigationController pushViewController:tx animated:YES];
+//    [tx release];
+    
+	//UITableViewCell * newCell=[tableView cellForRowAtIndexPath:indexPath];
+	//oldCell = [newCell retain];
+}
+
+#pragma mark TableView methods
+
+//从cell里面分发出来的事件，在这里可以跳转了
+//row　就是第几行　可以找出这一行的数据了　简单吧　哈哈
+-(void) breakPage:(int)row{
+    
+//    Commentary *commentaryController = [[Commentary alloc]init];
+//    [self.navigationController pushViewController:commentaryController animated:YES];
+//    [commentaryController release];
+    
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void) dealloc{
+    [tvDynamic release];
+    tvDynamic = nil;
+    [super dealloc];
+}
+
+@end

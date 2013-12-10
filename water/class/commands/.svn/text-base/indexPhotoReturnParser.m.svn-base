@@ -1,0 +1,34 @@
+//
+//  indexPhotoReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "indexPhotoReturnParser.h"
+#import "indexPhotoReturn.h"
+@implementation indexPhotoReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        for (int i =0; i<[self.sRetData count]; i++) {
+            NSDictionary *tempDic = [self.sRetData objectAtIndex:i];
+            indexPhotoReturn *Item = [[indexPhotoReturn alloc] init];
+            Item.shop_photo = [tempDic objectForKey:@"shop_photo"];
+            Item.seller_info_id = [tempDic objectForKey:@"seller_info_id"];
+            Item.shop_name = [tempDic
+                objectForKey:@"shop_name"];
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+   
+        
+        }
+    
+    return YES;
+    
+}
+@end

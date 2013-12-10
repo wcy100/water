@@ -1,0 +1,41 @@
+//
+//  DB.h
+//  NewLuckyMedia
+//
+//  Created by 李哲 on 12-9-29.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <sqlite3.h>
+
+
+
+#define kDBPath1 (@"USERDB.sqlite3")
+#define USERTABLE (@"USER")
+#define SHOPS (@"SHOPS")
+#define GOODS (@"GOODS")
+#define COLLECTEDSHOPS (@"COLLECTEDSHOPS")
+#define COLLECTEDGOODS (@"COLLECTEDGOODS")
+#define SQLITE_DONE 101
+@class shop;
+@class goods;
+@interface DB : NSObject {
+    
+}
+
++ (BOOL)openDB;
++ (void)closeDB;
+
++(int)clearShops;
++ (int)insertShop:(shop *)shop;//添加数据
++(NSMutableArray *)getShops:(NSRange)range;
++ (NSMutableArray *)getShops;
+
++(int)clearGoods;
++ (int)insertGoods:(goods *)goods;
++ (NSMutableArray *)getGoods;
++(NSMutableArray *)getGOODS:(NSRange)range;
+
++ (NSInteger)getCount:(NSString *)table;
+@end

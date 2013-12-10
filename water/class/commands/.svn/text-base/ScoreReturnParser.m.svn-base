@@ -1,0 +1,27 @@
+//
+//  ScoreReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-29.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "ScoreReturnParser.h"
+#import "ScoreReturn.h"
+@implementation ScoreReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        ScoreReturn *Item = [[ScoreReturn alloc] init];
+        Item.jf_count = [self.sRetData objectForKey:@"jf_count"];
+        [self.allDatas addObject:Item];
+        
+        [Item release];
+        
+        }
+    
+    return YES;
+    
+}
+@end

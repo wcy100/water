@@ -1,0 +1,44 @@
+//
+//  GroupBuyListReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "GroupBuyListReturn.h"
+
+@implementation GroupBuyListReturn
+@synthesize ware_info_id;
+@synthesize ware_title;
+@synthesize real_price;
+@synthesize buy_count;
+@synthesize sell_price;
+@synthesize ware_big_photo;
+@synthesize ware_content;
+@synthesize is_seven_return;
+@synthesize all_time_return;
+@synthesize start_date;
+@synthesize close_date;
+@synthesize is_sell_off;
+@synthesize is_time_out;
+@synthesize countRecord;
+@synthesize countPage;
+- (void)dealloc
+{
+    [ware_info_id release];
+    [ware_title release];
+    [real_price release];
+    [buy_count release];
+    [sell_price release];
+    [ware_big_photo release];
+    [ware_content release];
+    [is_seven_return release];
+    [all_time_return release];
+    [start_date release];
+    [close_date release];
+    [is_sell_off release];
+    [is_time_out release];
+    [super dealloc];
+}
+@end

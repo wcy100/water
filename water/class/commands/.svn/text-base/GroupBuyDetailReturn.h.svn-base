@@ -1,0 +1,29 @@
+//
+//  GroupBuyDetailReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface GroupBuyDetailReturn : NSObject
+
+@property (nonatomic, retain) NSString *ware_title;
+@property (nonatomic, retain) NSString *real_price;
+@property (nonatomic, retain) NSString *buy_count;
+@property (nonatomic, retain) NSString *sell_price;
+@property (nonatomic, retain) NSString *ware_big_photo;
+@property (nonatomic, retain) NSString *ware_content;
+@property (nonatomic, retain) NSString *is_seven_return;
+@property (nonatomic, retain) NSString *all_time_return;
+@property (nonatomic, retain) NSString *start_date;
+@property (nonatomic, retain) NSString *close_date;
+@property (nonatomic, retain) NSString *is_sell_off;
+@property (nonatomic, retain) NSString *is_time_out;
+@property (nonatomic, retain) NSString *product_info;
+@property (nonatomic, assign) NSInteger  best;
+@property (nonatomic, assign) NSInteger middle;
+@property (nonatomic, assign) NSInteger bad;
+@end

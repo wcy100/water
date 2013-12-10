@@ -1,0 +1,653 @@
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands
+END
+SJInfoListReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJInfoListReturn.m
+END
+ScoreReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ScoreReturnParser.m
+END
+PDFLListReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/PDFLListReturnParser.h
+END
+SJDetailReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJDetailReturn.h
+END
+SJInfoListReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJInfoListReturnParser.h
+END
+PDFLListReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/PDFLListReturnParser.m
+END
+SJDetailReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJDetailReturn.m
+END
+SJInfoListReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJInfoListReturnParser.m
+END
+GroupBuyListCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyListCommand.h
+END
+loginCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/loginCommand.h
+END
+SecondHandMESCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandMESCommand.h
+END
+GroupBuyListCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyListCommand.m
+END
+loginCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 175
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/loginCommand.m
+END
+SecondHandMESCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandMESCommand.m
+END
+SecondHandInfoReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandInfoReturn.h
+END
+AddSecondHandMESCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecondHandMESCommand.h
+END
+SecondHandInfoReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandInfoReturn.m
+END
+AddSecondHandMESCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecondHandMESCommand.m
+END
+SecondHandMESReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandMESReturnParser.h
+END
+UserInfoReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoReturn.h
+END
+ShopCommentCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ShopCommentCommand.h
+END
+UserInfoUpdateCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoUpdateCommand.h
+END
+SecondHandMESReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandMESReturnParser.m
+END
+UserInfoUpdateReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoUpdateReturn.h
+END
+GroupBuyDetailCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyDetailCommand.h
+END
+indexPhotoReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/indexPhotoReturnParser.h
+END
+SecondHandInfoReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandInfoReturnParser.h
+END
+UserInfoReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoReturn.m
+END
+ShopCommentCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ShopCommentCommand.m
+END
+UserInfoUpdateCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoUpdateCommand.m
+END
+UserInfoUpdateReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoUpdateReturn.m
+END
+GroupBuyDetailCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyDetailCommand.m
+END
+indexPhotoReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/indexPhotoReturnParser.m
+END
+SecondHandInfoReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandInfoReturnParser.m
+END
+SecondHandDetailReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandDetailReturnParser.h
+END
+UserInfoReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoReturnParser.h
+END
+GroupBuyListReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyListReturn.h
+END
+loginReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/loginReturn.h
+END
+SecondHandDetailReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandDetailReturnParser.m
+END
+ScoreReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ScoreReturn.h
+END
+GroupBuyDetailReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyDetailReturnParser.h
+END
+UserInfoReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoReturnParser.m
+END
+GroupBuyListReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 181
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyListReturn.m
+END
+loginReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/loginReturn.m
+END
+TypeInfosCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/TypeInfosCommand.h
+END
+ScoreReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ScoreReturn.m
+END
+PDFLListCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/PDFLListCommand.h
+END
+SecondHandInfoCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandInfoCommand.h
+END
+PDFLListReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/PDFLListReturn.h
+END
+GroupBuyDetailReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyDetailReturnParser.m
+END
+AddSecendHandReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecendHandReturnParser.h
+END
+AddShopCommentReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddShopCommentReturnParser.h
+END
+AddSecondHandMESReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecondHandMESReturn.h
+END
+TypeInfosCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/TypeInfosCommand.m
+END
+GroupBuyListReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyListReturnParser.h
+END
+PDFLListCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/PDFLListCommand.m
+END
+loginReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/loginReturnParser.h
+END
+SecondHandInfoCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandInfoCommand.m
+END
+PDFLListReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 177
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/PDFLListReturn.m
+END
+AddSecendHandReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 188
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecendHandReturnParser.m
+END
+AddShopCommentReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddShopCommentReturnParser.m
+END
+AddSecondHandMESReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecondHandMESReturn.m
+END
+UserInfoCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoCommand.h
+END
+GroupBuyListReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 187
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyListReturnParser.m
+END
+loginReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/loginReturnParser.m
+END
+ShopCommentReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ShopCommentReturn.h
+END
+SJDetailCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJDetailCommand.h
+END
+UserInfoCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoCommand.m
+END
+SignCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SignCommand.h
+END
+AddSecondHandMESReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecondHandMESReturnParser.h
+END
+ShopCommentReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ShopCommentReturn.m
+END
+SJDetailCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJDetailCommand.m
+END
+SignCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 174
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SignCommand.m
+END
+AddSecondHandMESReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 191
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecondHandMESReturnParser.m
+END
+ShopCommentReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ShopCommentReturnParser.h
+END
+SecondHandMESReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandMESReturn.h
+END
+SJDetailReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJDetailReturnParser.h
+END
+ShopCommentReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ShopCommentReturnParser.m
+END
+SecondHandMESReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandMESReturn.m
+END
+TypeInfosReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/TypeInfosReturn.h
+END
+indexPhotoCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/indexPhotoCommand.h
+END
+SJDetailReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJDetailReturnParser.m
+END
+indexPhotoReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/indexPhotoReturn.h
+END
+SJInfoListCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJInfoListCommand.h
+END
+TypeInfosReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 178
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/TypeInfosReturn.m
+END
+indexPhotoCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/indexPhotoCommand.m
+END
+indexPhotoReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/indexPhotoReturn.m
+END
+SecondHandDetailCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandDetailCommand.h
+END
+SJInfoListCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJInfoListCommand.m
+END
+SecondHandDetailReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandDetailReturn.h
+END
+SecondHandDetailCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 186
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandDetailCommand.m
+END
+TypeInfosReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/TypeInfosReturnParser.h
+END
+SecondHandDetailReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 185
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SecondHandDetailReturn.m
+END
+GroupBuyDetailReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyDetailReturn.h
+END
+TypeInfosReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/TypeInfosReturnParser.m
+END
+AddShopCommentCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddShopCommentCommand.h
+END
+AddSecendHandCommand.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecendHandCommand.h
+END
+GroupBuyDetailReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/GroupBuyDetailReturn.m
+END
+AddShopCommentReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddShopCommentReturn.h
+END
+AddSecendHandReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecendHandReturn.h
+END
+AddShopCommentCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 184
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddShopCommentCommand.m
+END
+AddSecendHandCommand.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecendHandCommand.m
+END
+AddShopCommentReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 183
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddShopCommentReturn.m
+END
+AddSecendHandReturn.m
+K 25
+svn:wc:ra_dav:version-url
+V 182
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/AddSecendHandReturn.m
+END
+UserInfoUpdateReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoUpdateReturnParser.h
+END
+UserInfoUpdateReturnParser.m
+K 25
+svn:wc:ra_dav:version-url
+V 189
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/UserInfoUpdateReturnParser.m
+END
+SJInfoListReturn.h
+K 25
+svn:wc:ra_dav:version-url
+V 179
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/SJInfoListReturn.h
+END
+ScoreReturnParser.h
+K 25
+svn:wc:ra_dav:version-url
+V 180
+/svn/honor/!svn/ver/30405/%E8%81%94%E9%80%9A/%E9%B8%A1%E8%A5%BF%E4%BF%A1%E6%81%AF%E6%B8%AF/%E5%AE%A2%E6%88%B7%E7%AB%AF/IOS/trunk/JXshop1.0/JXshop/class/commands/ScoreReturnParser.h
+END

@@ -1,0 +1,36 @@
+//
+//  ShopCommentCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "ShopCommentCommand.h"
+
+@implementation ShopCommentCommand
+@synthesize seller_info_id,toPage,pageCount;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"ShopComment";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    [dic setObject:seller_info_id forKey:@"seller_info_id"];
+    [dic setObject:[NSNumber numberWithInteger:toPage] forKey:@"toPage"];
+    [dic setObject:[NSNumber numberWithInteger:pageCount] forKey:@"pageCount"];
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [seller_info_id release];
+    [super dealloc];
+}
+@end

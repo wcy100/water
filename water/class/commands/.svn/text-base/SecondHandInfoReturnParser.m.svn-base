@@ -1,0 +1,48 @@
+//
+//  SecondHandInfoReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-25.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandInfoReturnParser.h"
+#import "SecondHandInfoReturn.h"
+@implementation SecondHandInfoReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        for (int i =0; i<[self.sRetData count]; i++) {
+            NSDictionary *tempDic = [self.sRetData objectAtIndex:i];
+            SecondHandInfoReturn *Item = [[SecondHandInfoReturn alloc] init];
+            secondHand *aSecond = Item.theScondHand;
+            aSecond.c_title= [tempDic objectForKey:@"c_title"];
+            aSecond.n_price= [tempDic objectForKey:@"n_price"];
+            aSecond.groom= [tempDic objectForKey:@"groom"];
+            aSecond.c_content= [tempDic objectForKey:@"c_content"];
+            // aSecond.seller_type_id= [tempDic objectForKey:@"seller_type_id"];
+            // aSecond.need_sell= [tempDic objectForKey:@"need_sell"];
+            //aSecond.xjcd= [tempDic objectForKey:@"xjcd"];
+            aSecond.second_hand_id = [tempDic objectForKey:@"second_hand_id"];
+            aSecond.head_photo= [tempDic objectForKey:@"head_photo"];
+            aSecond.second_photo = [tempDic objectForKey:@"second_photo"];
+            aSecond.linkman= [tempDic objectForKey:@"linkman"];
+            aSecond.linkphone= [tempDic objectForKey:@"linkphone"];
+            aSecond.date = [tempDic objectForKey:@"d_date"];
+            Item.countPage = [[tempDic objectForKey:@"pageCount"]integerValue];
+            Item.countRecord = [[tempDic objectForKey:@"rowCount"]integerValue];
+   
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+        
+        
+        }
+    
+    return YES;
+    
+}
+
+@end

@@ -1,0 +1,523 @@
+//
+//  DB.m
+//  NewLuckyMedia
+//
+//  Created by 李哲 on 12-9-29.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#include "DB.h"
+#import "Global.h"
+#import "shop.h"
+#import "goods.h"
+static sqlite3* database;
+static sqlite3_stmt *delete_statement = nil;
+@implementation DB
+
++ (void)closeDB
+{
+    if (nil != database) 
+    {
+        sqlite3_close(database);
+        database = nil;
+    }
+}
+
++ (BOOL)createShopsTable:(NSString *)table
+{
+    NSString *SQLCreate = nil;
+
+    SQLCreate =[NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@(ID INTEGER PRIMARY KEY AUTOINCREMENT,SHOPNAME VARCHAR(40),SHOPIMAGE VARCHAR(40),SHOPTYPE VARCHAR(40),IID integer,GOODCOMMAND integer,RECOMMEND integer,CONTENT VARCHAR(40),ADDRESS VARCHAR(40),TEL VARCHAR(40))",table];
+    
+    
+    sqlite3_stmt *statement; 
+    int result = sqlite3_prepare_v2(database, [SQLCreate UTF8String], -1, &statement, nil);
+    if (result != SQLITE_OK) 
+    {
+        //NSLog(@"create table failed! \n");
+        return NO;
+    }
+    
+    int sucess = sqlite3_step(statement);
+    sqlite3_finalize(statement);
+    if (sucess != SQLITE_DONE) 
+    {
+        //NSLog(@"Error: failed!\n");
+        return NO;
+    }
+    return YES;
+}
++ (BOOL)createGoodsTable:(NSString *)table
+{
+    NSString *SQLCreate = nil;
+    
+    SQLCreate =[NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@(ID INTEGER PRIMARY KEY AUTOINCREMENT,GOODSNAME VARCHAR(40),GOODSIMAGE VARCHAR(40),GOODSINFO VARCHAR(40), IID integer,REALPRICE VARCHAR(40),SELLPRICE VARCHAR(40),BUYCOUNT VARCHAR(40))",table];
+    
+    
+    sqlite3_stmt *statement;
+    int result = sqlite3_prepare_v2(database, [SQLCreate UTF8String], -1, &statement, nil);
+    if (result != SQLITE_OK)
+        {
+        //NSLog(@"create table failed! \n");
+        return NO;
+        }
+    
+    int sucess = sqlite3_step(statement);
+    sqlite3_finalize(statement);
+    if (sucess != SQLITE_DONE)
+        {
+        //NSLog(@"Error: failed!\n");
+        return NO;
+        }
+    return YES;
+}
++ (BOOL)openDB
+{ 
+    
+    if (nil !=database) 
+    {
+        return YES;//不是第一次被执行  里面是有内容的情况下直接返回
+        
+    }
+    //找一个有可写权限的路径     在沙盒里寻找一个可写文件夹路径
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    //在可写文件夹中加上用户要写入文件的名字  可写路径
+    
+//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//	NSString *userName = [userDefaults valueForKey:kUserName];
+//    
+//    documentPath = [documentPath stringByAppendingString:@"/"];
+//    documentPath = [documentPath stringByAppendingString:userName];
+    
+    if (![fileManager fileExistsAtPath:documentPath]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:documentPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    NSString *realPath= [documentPath stringByAppendingPathComponent:kDBPath1];
+    
+    if ([fileManager fileExistsAtPath:realPath]) 
+    {
+        sqlite3_open([realPath UTF8String], &database);//打开可写路径文件
+        //NSLog(@"setup db at path \"%@\" with status %d", realPath, result);
+        return YES;//不是第一次被执行  里面是有内容的情况下直接返回
+        
+    }
+    if (![fileManager fileExistsAtPath:realPath]) 
+    {
+        NSError *error;
+        NSString *srcPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:kDBPath1];
+		
+        //将数据库的只读原始路径复制到可写路径上
+        if (![fileManager copyItemAtPath:srcPath toPath:realPath error:&error]) {		
+            //NSLog(@"When setup db: %@", [error localizedDescription]);	
+        }
+        
+    }
+    sqlite3_open([realPath UTF8String], &database);//打开可写路径文件
+    //NSLog(@"setup db at path \"%@\" with status %d", realPath, result);
+    [DB createGoodsTable:GOODS];
+    [DB createShopsTable:SHOPS];
+    [DB createGoodsTable:COLLECTEDGOODS];
+    [DB createShopsTable:COLLECTEDSHOPS];
+    return YES;
+    
+}
+
+#pragma mark ---SHOPS DB---
++ (int)bindShopsSqliteValue:(shop *)shop
+{
+    sqlite3_stmt *stmt;
+
+    sqlite3_prepare_v2(database, "INSERT INTO SHOPS (SHOPNAME ,SHOPIMAGE ,SHOPTYPE , IID ,GOODCOMMAND ,RECOMMEND,CONTENT ,ADDRESS ,TEL) VALUES (?,?,?,?,?, ?,?,?,?)", -1, &stmt, NULL);
+    
+	sqlite3_bind_text(stmt, 1, [shop.name UTF8String], -1, NULL);//[message.usernum UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 2, [shop.imageBase64 UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 3, [shop.typeStr UTF8String], -1, NULL);
+    sqlite3_bind_int(stmt, 4, shop.ID);
+    sqlite3_bind_int(stmt, 5, shop.goodCommentCount);
+    sqlite3_bind_double(stmt, 6, shop.stars);
+    sqlite3_bind_text(stmt, 7, [shop.info UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 8, [shop.loction UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 9, [shop.tel UTF8String], -1, NULL);
+    //NSLog(@"usernum:%@",message.usernum);
+	int result = sqlite3_step(stmt);
+	sqlite3_finalize(stmt);
+    return result;
+}
+
++(int)deleteShop:(shop *)shop{
+    if (nil == database)
+        {
+        //NSLog(@"DB is not opened!\n");
+        return -1;
+        }
+    NSString *SQLfind = nil;
+	
+	SQLfind = [NSString stringWithFormat:@"delete from SHOPS where IID=%d",shop.ID];
+    //[NSString stringWithFormat:@"delete from SHOPS"];
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK != result)
+        {
+        return -1;
+        }
+    result = sqlite3_step(stmt);
+    
+    sqlite3_finalize(stmt);
+    return result;
+}
++ (int)insertShop:(shop *)shop
+{       
+    if (nil == database) 
+    {
+        //NSLog(@"DB not opened!\n");
+        return -1;
+    }
+	
+    int key = [DB bindShopsSqliteValue:shop ];
+	//NSLog(@"insertMessage ====== %d\n", key);
+    return key;
+}
+
++(int)clearShops{
+    if (nil == database)
+        {
+        //NSLog(@"DB is not opened!\n");
+        return -1;
+        }
+    NSString *SQLfind = nil;
+	
+	SQLfind = [NSString stringWithFormat:@"DROP TABLE SHOPS"];
+//[NSString stringWithFormat:@"delete from SHOPS"];
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK != result)
+    {
+        return -1;
+    }
+    result = sqlite3_step(stmt);
+
+    sqlite3_finalize(stmt);
+    
+    [DB createShopsTable:SHOPS];
+    return result;
+}
+
++ (NSMutableArray *)getShops
+{
+    if (nil == database) 
+    {
+        //NSLog(@"DB is not opened!\n");
+        return nil;
+    }
+    
+    NSMutableArray *resultArray = [[[NSMutableArray alloc] init] autorelease];
+    NSString *SQLfind = nil;
+	
+	SQLfind = @"SELECT SHOPNAME ,SHOPIMAGE ,SHOPTYPE , IID ,GOODCOMMAND ,RECOMMEND,CONTENT ,ADDRESS ,TEL FROM SHOPS order by ID desc";
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK == result)         
+    {
+        //NSLog(@"sqlite row : %d", SQLITE_ROW);
+        //int stepResult = sqlite3_step(stmt);
+   //     NSLog(@"sqlite 3 : %d", stepResult);
+		while (SQLITE_ROW == sqlite3_step(stmt)) 
+        {
+        shop *user1 = [DB getData1:stmt];
+        [resultArray addObject:user1];
+        }
+        sqlite3_finalize(stmt);
+        return resultArray;
+    }
+    sqlite3_finalize(stmt);
+    return nil;
+}
++ (NSInteger)getCount:(NSString *)table
+{
+    if (nil == database) 
+    {
+        //NSLog(@"DB is not opened!\n");
+        return 0;
+    }
+    NSString *SQLfind = nil;
+	
+	SQLfind = [NSString stringWithFormat:@"select count(*) from  %@",table];
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK == result)         
+    {
+ 
+       sqlite3_step(stmt);
+       int  count = sqlite3_column_int(stmt,0);
+        sqlite3_finalize(stmt);
+      
+        return count;
+    }
+    sqlite3_finalize(stmt);
+    return 0;
+  
+}
+
++ (shop*)getData1:(sqlite3_stmt*)stmt
+{
+    shop *shop1 = [[[shop alloc] init] autorelease];
+    //  SHOPNAME ,SHOPIMAGE ,SHOPTYPE , IID ,GOODCOMMAND ,RECOMMEND
+    int IID = sqlite3_column_int(stmt, 3);
+    shop1.ID = IID;
+    if (sqlite3_column_text(stmt,0))
+    {
+        shop1.name = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 0)];
+    }
+    if (sqlite3_column_text(stmt, 1))
+    {
+        shop1.imageBase64 = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 1)];
+    shop1.image = [Global decodeUIImageFromBase64:shop1.imageBase64];
+    }
+    if (sqlite3_column_text(stmt, 2))
+    {
+        shop1.typeStr = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 2)];
+    }
+    if (sqlite3_column_text(stmt, 4)) 
+    {
+        shop1.goodCommentCount = sqlite3_column_int(stmt, 4);
+    }
+    if (sqlite3_column_text(stmt, 5))
+    {
+        shop1.stars = sqlite3_column_double(stmt, 5);
+    }
+    if (sqlite3_column_text(stmt, 6))
+    {
+        shop1.info = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 6)];
+    }
+    if (sqlite3_column_text(stmt, 7))
+    {
+        shop1.loction = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 7)];
+    }
+    if (sqlite3_column_text(stmt, 8))
+    {
+        shop1.tel = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 8)];
+    }
+
+       return shop1;
+}
+//select * from SHOPS limit 2,5
++(NSMutableArray *)getShops:(NSRange)range{
+    NSInteger loc = range.location;
+    NSInteger len = range.length;
+    if (nil == database)
+        {
+        //NSLog(@"DB is not opened!\n");
+        return nil;
+        }
+    
+    NSMutableArray *resultArray = [[[NSMutableArray alloc] init] autorelease];
+    NSString *SQLfind = nil;
+	
+	SQLfind = [NSString stringWithFormat:
+               @"SELECT SHOPNAME ,SHOPIMAGE ,SHOPTYPE , IID ,GOODCOMMAND ,RECOMMEND FROM SHOPS limit %d,%d",loc,len];
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK == result)
+        {
+        //NSLog(@"sqlite row : %d", SQLITE_ROW);
+        //int stepResult = sqlite3_step(stmt);
+        //     NSLog(@"sqlite 3 : %d", stepResult);
+		while (SQLITE_ROW == sqlite3_step(stmt))
+            {
+            shop *user1 = [DB getData1:stmt];
+            [resultArray addObject:user1];
+            }
+        sqlite3_finalize(stmt);
+        return resultArray;
+        }
+    sqlite3_finalize(stmt);
+    return nil;
+
+}
+
+#pragma mark ---GOODS DB---
++ (int)bindGoodsSqliteValue:(goods *)goods
+{
+    sqlite3_stmt *stmt;
+    
+    sqlite3_prepare_v2(database, "INSERT INTO SHOPS (GOODSNAME ,GOODSIMAGE ,GOODSINFO , IID ,REALPRICE ,SELLPRICE ,BUYCOUNT) VALUES (?,?,?,?,?,?,?)", -1, &stmt, NULL);
+    
+	sqlite3_bind_text(stmt, 1, [goods.goodsName UTF8String], -1, NULL);//[message.usernum UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 2, [goods.imageBase64 UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 3, [goods.info UTF8String], -1, NULL);
+    sqlite3_bind_int(stmt, 4, goods.ID);
+    sqlite3_bind_text(stmt, 5, [goods.realPrice UTF8String], -1, NULL);
+  
+    sqlite3_bind_text(stmt, 6, [goods.sellPrice UTF8String], -1, NULL);
+    sqlite3_bind_text(stmt, 7, [goods.buyCount UTF8String], -1, NULL);
+
+    //NSLog(@"usernum:%@",message.usernum);
+	int result = sqlite3_step(stmt);
+	sqlite3_finalize(stmt);
+    return result;
+}
++ (int)insertGoods:(goods *)goods{
+    if (nil == database)
+        {
+        //NSLog(@"DB not opened!\n");
+        return -1;
+        }
+	
+    int key = [DB bindGoodsSqliteValue:goods ];
+	//NSLog(@"insertMessage ====== %d\n", key);
+    return key;
+}
++ (NSMutableArray *)getGoods
+{
+    if (nil == database)
+        {
+        //NSLog(@"DB is not opened!\n");
+        return nil;
+        }
+    
+    NSMutableArray *resultArray = [[[NSMutableArray alloc] init] autorelease];
+    NSString *SQLfind = nil;
+	
+	SQLfind = @"SELECT GOODSNAME ,GOODSIMAGE ,GOODSINFO , IID ,REALPRICE ,SELLPRICE ,BUYCOUNT FROM GOODS order by ID desc";
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK == result)
+        {
+        //NSLog(@"sqlite row : %d", SQLITE_ROW);
+        //int stepResult = sqlite3_step(stmt);
+        //     NSLog(@"sqlite 3 : %d", stepResult);
+		while (SQLITE_ROW == sqlite3_step(stmt))
+            {
+            goods *goods = [DB getData2:stmt];
+            [resultArray addObject:goods];
+            }
+        sqlite3_finalize(stmt);
+        return resultArray;
+        }
+    sqlite3_finalize(stmt);
+    return nil;
+}
++ (goods*)getData2:(sqlite3_stmt*)stmt
+{
+    goods *shop1 = [[[goods alloc] init] autorelease];
+    //  SHOPNAME ,SHOPIMAGE ,SHOPTYPE , IID ,GOODCOMMAND ,RECOMMEND
+    int IID = sqlite3_column_int(stmt, 3);
+    shop1.ID = IID;
+    if (sqlite3_column_text(stmt,0))
+        {
+        shop1.goodsName = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 0)];
+        }
+    if (sqlite3_column_text(stmt, 1))
+        {
+        shop1.imageBase64 = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 1)];
+        shop1.image = [Global decodeUIImageFromBase64:shop1.imageBase64];
+        }
+    if (sqlite3_column_text(stmt, 2))
+        {
+        shop1.info = [NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 2)];
+        }
+    if (sqlite3_column_text(stmt, 4))
+        {
+        shop1.realPrice =[NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 4)];         }
+    if (sqlite3_column_text(stmt, 5))
+        {
+        shop1.sellPrice =[NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 5)];        }
+    if (sqlite3_column_text(stmt, 6))
+        {
+        shop1.buyCount =[NSString stringWithUTF8String:(char*)sqlite3_column_text(stmt, 6)];
+        }
+    return shop1;
+}
++(int)clearGoods{
+    if (nil == database)
+        {
+        //NSLog(@"DB is not opened!\n");
+        return -1;
+        }
+    NSString *SQLfind = nil;
+	
+	SQLfind = [NSString stringWithFormat:@"DROP TABLE GOODS"];
+    //[NSString stringWithFormat:@"delete from SHOPS"];
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK != result)
+        {
+        return -1;
+        }
+    result = sqlite3_step(stmt);
+    
+    sqlite3_finalize(stmt);
+    
+    [DB createGoodsTable:GOODS];
+    return result;
+}
++(NSMutableArray *)getGOODS:(NSRange)range{
+    NSInteger loc = range.location;
+    NSInteger len = range.length;
+    if (nil == database)
+        {
+        //NSLog(@"DB is not opened!\n");
+        return nil;
+        }
+    
+    NSMutableArray *resultArray = [[[NSMutableArray alloc] init] autorelease];
+    NSString *SQLfind = nil;
+	
+	SQLfind = [NSString stringWithFormat:
+               @"SELECT GOODSNAME ,GOODSIMAGE ,GOODSINFO , IID ,REALPRICE ,SELLPRICE ,BUYCOUNT FROM GOODS limit %d,%d",loc,len];
+	
+    sqlite3_stmt *stmt;
+    int result = sqlite3_prepare_v2(database, [SQLfind UTF8String], -1, &stmt, NULL);
+    //NSLog(@"SQLfind:%@",SQLfind);
+    if (SQLITE_OK == result)
+        {
+		while (SQLITE_ROW == sqlite3_step(stmt))
+            {
+            goods *user1 = [DB getData2:stmt];
+            [resultArray addObject:user1];
+            }
+        sqlite3_finalize(stmt);
+        return resultArray;
+        }
+    sqlite3_finalize(stmt);
+    return nil;
+    
+}
+
+#pragma mark  --- collectshops DB ---
++ (int)insertcollectshops:(goods *)goods{
+    
+}
++ (NSMutableArray *)getcollectshops{
+    
+}
++(int)clearcollectshops{
+    
+}
+#pragma mark  --- collectgoods DB ---
++ (int)insertcollectgoods:(goods *)goods{
+    
+}
++ (NSMutableArray *)getcollectgoods{
+    
+}
++(int)clearcollectgoods{
+    
+}
+@end

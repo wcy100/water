@@ -1,0 +1,22 @@
+//
+//  ShopCommentReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "ShopCommentReturn.h"
+
+@implementation ShopCommentReturn
+@synthesize screen_name,pj_level,op_date,head_photo,content,countPage,countRecord;
+- (void)dealloc
+{
+    [screen_name release];
+    [pj_level release];
+    [head_photo release];
+    [content release];
+    [op_date release];
+    [super dealloc];
+}
+@end

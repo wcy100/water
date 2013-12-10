@@ -1,0 +1,40 @@
+//
+//  SecondHandDetailReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-26.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandDetailReturnParser.h"
+#import "SecondHandDetailReturn.h"
+@implementation SecondHandDetailReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        //for (int i =0; i<[self.sRetData count]; i++)
+        {
+            NSDictionary *tempDic = self.sRetData;
+            SecondHandDetailReturn *Item = [[SecondHandDetailReturn alloc] init];
+            Item.c_title= [tempDic objectForKey:@"c_title"];
+            Item.n_price= [tempDic objectForKey:@"n_price"];
+            Item.groom= [tempDic objectForKey:@"groom"];
+            Item.c_content= [tempDic objectForKey:@"c_content"];
+            Item.head_photo= [tempDic objectForKey:@"head_photo"];
+            Item.linkman= [tempDic objectForKey:@"linkman"];
+            Item.linkphone= [tempDic objectForKey:@"linkphone"];
+            Item.d_date = [tempDic objectForKey:@"d_date"];
+            Item.fbr_name = [tempDic objectForKey:@"fbr_name"];
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+        
+        
+        }
+    
+    return YES;
+    
+}
+@end

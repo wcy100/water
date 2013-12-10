@@ -1,0 +1,20 @@
+//
+//  indexPhotoReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface indexPhotoReturn : NSObject
+{
+    NSString *_shop_photo;
+    NSString *_seller_info_id;
+    NSString *_shop_name;
+}
+@property (nonatomic, retain) NSString *shop_photo;
+@property (nonatomic, retain) NSString *seller_info_id;
+@property (nonatomic, retain) NSString *shop_name;
+@end

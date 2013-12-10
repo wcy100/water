@@ -1,0 +1,38 @@
+//
+//  SecondHandInfoCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-25.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandInfoCommand.h"
+
+@implementation SecondHandInfoCommand
+@synthesize type_id,pageCount,toPage;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"SecendHandInfo";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    
+    [dic setObject:type_id forKey:@"type_id"];
+    [dic setObject:[NSNumber numberWithInteger:toPage] forKey:@"toPage"];
+    [dic setObject:[NSNumber numberWithInteger:pageCount] forKey:@"pageSize"];
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [type_id release];
+    [super dealloc];
+}
+
+@end

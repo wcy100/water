@@ -1,0 +1,47 @@
+//
+//  SJDetailReturnParser.m
+//  JXshop
+//
+//  Created by yu on 13-5-22.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SJDetailReturnParser.h"
+
+@implementation SJDetailReturnParser
+-(BOOL)paserReturnData
+{
+    if( nil != self.sRetData )
+        {
+        {
+            NSDictionary *tempDic = self.sRetData;
+            SJDetailReturn *Item = [[SJDetailReturn alloc] init];
+            Item.shop_photo = [tempDic objectForKey:@"shop_photo"];
+            Item.seller_info_id = [tempDic objectForKey:@"seller_info_id"];
+            Item.shop_type = [tempDic
+                              objectForKey:@"shop_type"];
+            Item.link_address = [tempDic
+                              objectForKey:@"link_address"];
+            Item.sp_phone = [tempDic
+                              objectForKey:@"sp_phone"];
+            Item.positiveCount = [tempDic
+                              objectForKey:@"positiveCount"];
+            Item.shop_content = [tempDic
+                              objectForKey:@"shop_content"];
+            [Item.shop_imgs addObjectsFromArray:[tempDic
+                              objectForKey:@"shop_imgs"]];
+            Item.shop_name = [tempDic
+                              objectForKey:@"shop_name"];
+            Item.shop_value = [tempDic objectForKey:@"shop_value"];
+            [self.allDatas addObject:Item];
+            
+            [Item release];
+        }
+        
+        
+        }
+    
+    return YES;
+    
+}
+@end

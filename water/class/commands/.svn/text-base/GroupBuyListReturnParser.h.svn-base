@@ -1,0 +1,13 @@
+//
+//  GroupBuyListReturnParser.h
+//  JXshop
+//
+//  Created by yu on 13-5-23.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "CDReturnParserBase.h"
+
+@interface GroupBuyListReturnParser : CDReturnParserBase
+
+@end

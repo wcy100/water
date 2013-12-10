@@ -1,0 +1,28 @@
+//
+//  SecondHandMESReturn.m
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandMESReturn.h"
+
+@implementation SecondHandMESReturn
+@synthesize user_id;
+@synthesize head_photo;
+@synthesize content;
+@synthesize d_date;
+@synthesize countRecord;
+@synthesize countPage,screen_name;
+- (void)dealloc
+{
+    [screen_name release];
+    [user_id release];
+    [head_photo release];
+    [content release];
+    [d_date release];
+    
+    [super dealloc];
+}
+@end

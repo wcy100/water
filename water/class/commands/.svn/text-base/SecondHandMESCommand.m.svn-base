@@ -1,0 +1,37 @@
+//
+//  SecondHandMESCommand.m
+//  JXshop
+//
+//  Created by yu on 13-5-27.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import "SecondHandMESCommand.h"
+
+@implementation SecondHandMESCommand
+@synthesize secondhand_id,pageCount,toPage;
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.requestService = @"SecendHandMES";
+    }
+    return self;
+}
+-(NSString*)getCommandJSONObj
+{
+    
+    NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init]autorelease];
+    
+    [dic setObject:secondhand_id forKey:@"secondhand_id"];
+    [dic setObject:[NSNumber numberWithInteger:toPage] forKey:@"toPage"];
+    [dic setObject:[NSNumber numberWithInteger:pageCount] forKey:@"pageSize"];
+    return [dic JSONString];
+    
+}
+- (void)dealloc
+{
+    [secondhand_id release];
+    [super dealloc];
+}
+@end

@@ -1,0 +1,21 @@
+//
+//  SecondHandDetailReturn.h
+//  JXshop
+//
+//  Created by yu on 13-5-26.
+//  Copyright (c) 2013年 cd. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface SecondHandDetailReturn : NSObject
+@property (nonatomic, retain) NSString *c_title;
+@property (nonatomic, retain) NSString *n_price;
+@property (nonatomic, retain) NSString *c_content;
+@property (nonatomic, retain) NSString *groom;
+@property (nonatomic, retain) NSString *fbr_name;
+@property (nonatomic, retain) NSString *head_photo;
+@property (nonatomic, retain) NSString *linkman;
+@property (nonatomic, retain) NSString *linkphone;
+@property (nonatomic, retain) NSString *d_date;
+@end
