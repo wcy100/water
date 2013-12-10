@@ -99,7 +99,11 @@ const float MoveAnimationDuration = 0.3;
 	if (panGestureReconginzer.state == UIGestureRecognizerStateChanged)
     {
         CGFloat translation = [panGestureReconginzer translationInView:self.contentView].x;
-        self.contentView.transform = CGAffineTransformMakeTranslation(translation+currentTranslate, 0);
+        NSLog(@"%.2f      %.2f", self.contentView.transform.tx, self.contentView.transform.ty);
+        if (translation>0 || (translation<0 && self.contentView.transform.tx>0)) {
+            self.contentView.transform = CGAffineTransformMakeTranslation(translation+currentTranslate, 0);
+        }
+        
         UIView *view ;
         if (translation+currentTranslate>0)
         {
