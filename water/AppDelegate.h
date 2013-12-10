@@ -10,12 +10,14 @@
 #import "Global.h"
 #import "loginReturn.h"
 #import "SidebarViewController.h"
+#include "BMapKit.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     
     NSString *_userNum;
     NSString *_userPWD;
     BOOL autoLoginFlag;
+    BMKMapManager* _mapManager;
 }
 @property (retain, nonatomic) SidebarViewController *viewController;
 @property (retain, nonatomic) UIWindow *window;
