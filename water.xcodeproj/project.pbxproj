@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169671EB1856E7D5008EE2F7 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 169671EA1856E7D5008EE2F7 /* Entitlements.plist */; };
 		C68C96DC1856E4D700DCE31F /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C96D21856E4D700DCE31F /* FirstViewController.xib */; };
 		C68C96DD1856E4D700DCE31F /* LeftSideBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C68C96D41856E4D700DCE31F /* LeftSideBarViewController.m */; };
 		C68C96DE1856E4D700DCE31F /* LeftSideBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C68C96D51856E4D700DCE31F /* LeftSideBarViewController.xib */; };
@@ -105,7 +106,20 @@
 		C6E8C5491856D95D0051A7A0 /* SidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6E8C5471856D95D0051A7A0 /* SidebarViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		169671EC1856E867008EE2F7 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.dtrace;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
+		169671EA1856E7D5008EE2F7 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		C68C96D11856E4D700DCE31F /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C68C96D21856E4D700DCE31F /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		C68C96D31856E4D700DCE31F /* LeftSideBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideBarViewController.h; sourceTree = "<group>"; };
@@ -313,6 +327,7 @@
 		C6E8C3641856C29D0051A7A0 = {
 			isa = PBXGroup;
 			children = (
+				169671EA1856E7D5008EE2F7 /* Entitlements.plist */,
 				C6E8C5221856CA740051A7A0 /* JSONKit */,
 				C6E8C3A51856C50F0051A7A0 /* ASIHTTPRequest */,
 				C6E8C3C01856C5100051A7A0 /* LoadMoreDataView */,
@@ -628,6 +643,7 @@
 				C6E8C36B1856C29D0051A7A0 /* Resources */,
 			);
 			buildRules = (
+				169671EC1856E867008EE2F7 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -672,6 +688,7 @@
 				C6E8C3891856C29D0051A7A0 /* Images.xcassets in Resources */,
 				C68C96DC1856E4D700DCE31F /* FirstViewController.xib in Resources */,
 				C6E8C5191856CA5F0051A7A0 /* GuideViewController.xib in Resources */,
+				169671EB1856E7D5008EE2F7 /* Entitlements.plist in Resources */,
 				C6E8C5151856CA5F0051A7A0 /* BaseViewController.xib in Resources */,
 				C6E8C5491856D95D0051A7A0 /* SidebarViewController.xib in Resources */,
 				C6E8C37B1856C29D0051A7A0 /* InfoPlist.strings in Resources */,
@@ -863,6 +880,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "water/water-Prefix.pch";
 				INFOPLIST_FILE = "water/water-Info.plist";
@@ -876,6 +894,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "water/water-Prefix.pch";
 				INFOPLIST_FILE = "water/water-Info.plist";
